@@ -73,13 +73,13 @@ jobs:
     #   uses: hashicorp/setup-terraform@v1
     #   with:
     #     cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
-    steps:
-    - run: terraform --version
+    - name: Terraform installation
+      run: terraform --version
       fix:
         runs-on: ubuntu-latest
         steps:
-          - run: brew install hashicorp/tap/terraform
-          - run: terraform --version
+          run: brew install hashicorp/tap/terraform
+          run: terraform --version
 
     # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
     - name: Terraform Init
