@@ -1,7 +1,6 @@
-terraform 
-{
-    backend "local" 
-    {  }
+terraform {
+    backend "local" {  
+    }
 }
 
 # An example resource that does nothing.
