@@ -74,7 +74,6 @@ jobs:
     #   with:
     #     cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
     - name: Terraform installation
-      runs-on: ubuntu-latest
       run: brew install hashicorp/tap/terraform
       run: terraform --version
 
